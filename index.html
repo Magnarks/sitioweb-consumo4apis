@@ -173,7 +173,7 @@
 <script>
 function API_Idioma(){
     let texto = document.getElementById("textoidioma").value;
-    let endPoint = 'localhost/idioma/' + texto;
+    let endPoint = 'https://fastapis4.onrender.com/idioma/' + texto;
 
     console.log(endPoint);
 
@@ -181,7 +181,7 @@ function API_Idioma(){
 }
 function API_Clima(){
     let texto = document.getElementById("textoclima").value;
-    let endPoint = 'localhost/clima/' + texto;
+    let endPoint = 'https://fastapis4.onrender.com/clima/' + texto;
 
     console.log(endPoint);
 
@@ -189,7 +189,7 @@ function API_Clima(){
 }
 function API_Bromas(){
     let texto = document.getElementById("textobroma").value;
-    let endPoint = 'localhost/clima/' + texto;
+    let endPoint = 'https://fastapis4.onrender.com/clima/' + texto;
 
     console.log(endPoint);
 
@@ -197,6 +197,6 @@ function API_Bromas(){
 }
 function API_Wikipedia(parametro1, parametro2){
     let data = {idioma: parametro1, busqueda: parametro2};
-    fetch("localhost/wikipedia/", {method: "POST", headers: {'Content-Type:': 'application/json'}, body: JSON.stringify(data)}).then(response => response.json()).then(response => console.log(response)).catch(err => console.error(err));
+    fetch("https://fastapis4.onrender.com/wikipedia/", {method: "POST", headers: {'Content-Type:': 'application/json'}, body: JSON.stringify(data)}).then(response => response.json()).then(response => console.log(response)).catch(err => console.error(err));
 }
 </script>
