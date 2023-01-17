@@ -108,7 +108,7 @@
                                     <h4 class="text-white">API - Wikipedia</h4>
                                     <p class="mb-0 text-white-50">Busqueda en wikipedia mediante POST, recibe 2 parametros, el idioma (ISO 639-1) y lo que se va a buscar, /wikipedia/</p>
                                     <hr class="d-none d-lg-block mb-0 me-0" />
-                                    <button class="btn btn-primary" onclick="API_Wikipedia('es', 'python')">Enviar</button>
+                                    <button class="btn btn-primary" onclick="API_Wikipedia()">Enviar</button>
                                 </div>
                             </div>
                         </div>
@@ -195,8 +195,8 @@ function API_Bromas(){
 
     fetch(endPoint);
 }
-function API_Wikipedia(parametro1, parametro2){
-    let data = {idioma: parametro1, busqueda: parametro2};
+function API_Wikipedia(){
+    let data = {idioma: "es", busqueda: "python"};
     fetch("https://fastapis4.onrender.com/wikipedia/", {method: "POST", headers: {'Content-Type:': 'application/json'}, body: JSON.stringify(data)}).then(response => response.json()).then(response => console.log(response)).catch(err => console.error(err));
 }
 </script>
